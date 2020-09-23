@@ -1,6 +1,14 @@
-language: php 
-php: 
-    - ’7.3’ 
-script: "tests/build.sh" 
-before_install: 
-    - chmod +x tests/build.sh
+language: php
+php:
+- "’7.3’"
+script: tests/build.sh
+before_install:
+- chmod +x tests/build.sh
+deploy:
+  provider: heroku
+  api_key:
+    secure: KSryXTLidTuzLsBvo++NfAccaZ3zujxHaHpOoq8JCCzCAzTnu4arpaM4yusE2H/Nt/XP2Hse05UKO3WyxwZMCGmaNMkxeh1k5vbuohcInT44ZFjrF2dbdQUFvhLiov2gW7G0DWJLUhxDgAxXdCDRhkT6LxVoTZCyrMeUFvlcTLDIfcC7q0zxKfhdi4uxEcXoMkvHkM5pVl1DOL5Hnw+v73uLHLUz3ncVlVxEO8BdN7YH7s49eR/kza7ftW0a7Ca6srDCFsWtvphisUueVP8vYoCrdhzKwOsvCScBtAi4NN9gqB6s+gXJ2HhAdSdn4RWVSSILshR9qkbTwaLJlvFHhZGA3FaD0cppjz4059uj5nEpSXw18/lepgEBadI7xBenQq/Ympj4sjJajfZMreYQA2Cdc1hjNz9muKKUuQANBKTUNRvytB64ki8isSDNItfWoc3ajUY71h61c/5dBe8gR7JY9TajtPkRQr91r6ppEIQ6doprNOj1ftcsdHRx1xqSyNMXmfe/nm6LaFSUAG7uBo6qlw4wREVcAYavHDXXjMYppHLItjG6VClpA3Q5Px1nvZB7OmKsXdD7jsy06QCIXWJuRqaU5iKy4k4Nt7cFXoFXOjKXphR7wqCYo6iUMkdVP8D9qVdigVP0VLSg4zL76pvuFnUhW3FEY46SfpLf4pA=
+  app: cpalabo1-54723
+  on:
+    repo: tobalfred/cpalabo1
+  skip_cleanup: 'true'
